@@ -1,0 +1,69 @@
+@import url('tokens.css');
+
+* { 
+    margin: 0; 
+    padding: 0
+}
+
+body {
+    background-color: var(--color-background-page);
+    color: var(--color-text);
+    font-family: var(--font-family-text);
+    line-height: 1.5;
+}
+
+main {
+    margin-left: 2rem;
+}
+
+h1, h2 {
+    color: var(--color-accent);
+    font-family: var(--font-family-header);
+}
+
+a {
+    /* color: #e07400; */
+    /* color: #d47106 */
+    color: var(--color-link);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    background-color: var(--color-background-header);
+    list-style-type: none;
+    padding: 2rem;
+}
+
+.meal-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 3rem;
+    gap: 1.25rem;
+}
+
+.meal {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-container {
+    display: grid;
+    max-width: 22rem;
+    max-height: 10rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+}
+
+.invisible-div {
+    height: 2vh;
+}
+
+.hobby {
+    list-style-type: none;
+}
+
+#misaki-img {
+    margin: 2rem 0 2rem 0;
+}

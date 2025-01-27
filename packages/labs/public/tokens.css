@@ -1,0 +1,9 @@
+:root {
+    --color-accent: #4e2901;
+    --color-link: #af1f1f;
+    --color-text: #942b14d3;
+    --color-background-page: #fff3e5;
+    --color-background-header: #ebd2ba;
+    --font-family-header: "Jua", sans-serif;
+    --font-family-text: 'Lexend', sans-serif;
+}

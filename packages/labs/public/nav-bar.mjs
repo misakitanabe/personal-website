@@ -17,7 +17,7 @@ TEMPLATE.innerHTML = `
 
         .nav-bar {
             display: grid;
-            grid-template-columns: 4fr 1fr;
+            grid-template-columns: 3fr 2fr 0.8fr;
             align-items: center;         
             background-color: var(--color-background-header);
             list-style-type: none;
@@ -35,13 +35,20 @@ TEMPLATE.innerHTML = `
         #menu {
             width: 4rem;
             height: 2rem;
-            grid-column: 2 / 3;
+            grid-column: 3 / 4;
             grid-row: 1 / 2;
             justify-self: end;
             background-color: var(--color-accent);
-            color: white;
+            color: var(--color-background-page);
             font-family: var(--font-family-header);
             border-radius: 1rem;
+        }
+
+        .dark-mode-checkbox {
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+            margin-left: auto;
+            margin-right: 0.5rem;
         }
 
         /* desktop styles */
@@ -62,6 +69,10 @@ TEMPLATE.innerHTML = `
             #menu {
                 display: none;
             }
+
+            .dark-mode-checkbox {
+                margin-left: auto;
+            }
         }
     </style>
 
@@ -73,6 +84,10 @@ TEMPLATE.innerHTML = `
             <a href="/cooking.html">Cooking</a>
             <a href="https://github.com/misakitanabe" target="_blank">Projects</a>
         </div>
+        <label class="dark-mode-checkbox">
+            <input type="checkbox" autocomplete="off" />
+            Dark mode
+        </label>
     </nav>
 `;
 
@@ -99,7 +114,7 @@ class NavBar extends HTMLElement {
             } else {
                 navLinks.style.display = "flex";
             }
-        }
+        };
 
         // event listener for closing menu when clicking outside of nav bar
         document.body.onclick = (e) => {
@@ -125,6 +140,26 @@ class NavBar extends HTMLElement {
                 navLinks.style.display = "none";
             }
             lastWidth = newWidth;
+        };
+
+        // event listener for toggling dark mode
+        const checkbox = shadowRoot.querySelector(".dark-mode-checkbox input");
+        checkbox.addEventListener("change", () => {
+            console.log(`clicked checkbox! ${checkbox}`);
+            if (checkbox.checked) {
+                document.body.classList.add("dark-mode");
+                localStorage.setItem("darkMode", "on");
+            } else {
+                document.body.classList.remove("dark-mode");
+                localStorage.setItem("darkMode", "off");
+            }
+        });
+
+        // Reads local storage for darkmode setting
+        const darkMode = localStorage.getItem("darkMode");
+        if (darkMode == "on") {
+            checkbox.checked = true;
+            document.body.classList.add("dark-mode");
         }
     }
 }

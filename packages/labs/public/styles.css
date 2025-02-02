@@ -1,7 +1,7 @@
 @import url('tokens.css');
 
-* { 
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0
 }
 
@@ -16,30 +16,30 @@ main {
     margin-left: 2rem;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: var(--color-accent);
     font-family: var(--font-family-header);
 }
 
 a {
-    /* color: #e07400; */
-    /* color: #d47106 */
     color: var(--color-link);
 }
 
-.nav-bar {
+/* .nav-bar {
     display: flex;
     align-items: center;
     gap: 2em;
     background-color: var(--color-background-header);
     list-style-type: none;
     padding: 2rem;
-}
+    margin-bottom: 2rem;
+} */
 
 .meal-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    margin-top: 3rem;
+    margin-top: 1rem;
     gap: 1.25rem;
 }
 
@@ -65,5 +65,5 @@ a {
 }
 
 #misaki-img {
-    margin: 2rem 0 2rem 0;
+    margin: 0 0 2rem 0;
 }

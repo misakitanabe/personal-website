@@ -3,7 +3,7 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
 function Todo(props) {
     return (
-        <li>
+        <li  className='p-1'>
             <label htmlFor={props.id}>
                 <input type="checkbox" id={props.id} defaultChecked={props.completed} onChange={() => props.toggleTaskCompleted(props.id)} /> {props.name}
             </label>

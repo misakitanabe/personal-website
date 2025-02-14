@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+th, td {
+    padding: 0.25rem;
+}

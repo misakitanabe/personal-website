@@ -1,0 +1,15 @@
+/* Header styles */
+header {
+    min-height: 6rem;
+    background-color: rgb(97, 163, 126);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: rgb(253, 248, 235);
+}
+
+.uploaded-image {
+    width: 100%;
+    border-radius: 8%;
+}

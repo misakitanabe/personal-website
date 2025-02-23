@@ -43,12 +43,15 @@ header {
 }
 
 .category-image {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
     object-fit: contain;
     /* overflow: hidden; */
 }
 
 .category-image-container {
     overflow: hidden;
+    width: calc(14vw + 1rem);
+    height: 10rem;
+    border-radius: 1rem;
+    background-color: white;
 }

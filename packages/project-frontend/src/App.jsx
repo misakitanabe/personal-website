@@ -9,8 +9,8 @@ function App() {
   const [itemName, setItemName] = useState("");
 
   return (
-    <Upload onChange={(e) => {setItemName(e.target.value)}} itemName={itemName} />
-    // <Build />
+    // <Upload onChange={(e) => {setItemName(e.target.value)}} itemName={itemName} />
+    <Build />
   )
 }
 
